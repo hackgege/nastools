@@ -94,7 +94,7 @@
       layout-username="{{ CurrentUser.name }}"
       layout-systemflag="{{ SystemFlag }}"
       layout-useradmin="{{ CurrentUser.admin }}"
-      layout-search="{{ 1 }}"
+      layout-search="{{ CurrentUser.search }}"
       >
   </layout-searchbar>
   <div class="spinner-border" role="status" id="logo_animation"></div>
@@ -968,7 +968,6 @@
           </div>
         </form>
         <textarea class="form-control mt-2" id="torrent_urls" rows="8" placeholder="https://xxxx，换行添加多个链接" aria-label=""></textarea>
-        <textarea class="form-control mt-2" id="torrent_magnets" rows="8" placeholder="magnet:?xt=xxxxxx，换行添加多个链接" aria-label=""></textarea>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-link link-secondary me-auto" data-bs-dismiss="modal">取消</button>
@@ -1199,6 +1198,14 @@
             $(window).scrollTop(e.state.scroll);
           })
         }
+    });
+
+    // 浏览器关闭事件
+    window.addEventListener("beforeunload", function() {
+      // 关闭连接
+      stop_message();
+      stop_logging();
+      stop_progress();
     });
 
     // tooltip点击事件处理，阻止冒泡到上级元素，避免比如`点击tooltip切换了switch`的问题
