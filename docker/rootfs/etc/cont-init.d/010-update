@@ -177,7 +177,7 @@ function __main {
         branch="master"
         fi
 
-        git clean -dffx
+        echo git clean -dffx
         git fetch --depth 1 origin ${branch}
         git reset --hard origin/${branch}
 
