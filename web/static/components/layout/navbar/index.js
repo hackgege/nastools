@@ -193,7 +193,7 @@ export class LayoutNavbar extends CustomElement {
                            <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
                            <path d="M16 11l2 2l4 -4"></path>
                         </svg> 
-                        你好
+                        用户认证
                       </strong>
                     </button>
                   ` }
