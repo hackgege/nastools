@@ -4756,7 +4756,7 @@ class WebAction:
         用户认证
         """
         if data:
-            site = data.get("site")p
+            site = data.get("site")
             params = data.get("params")
         else:
             site, params = None, {}
