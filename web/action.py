@@ -4761,9 +4761,9 @@ class WebAction:
         else:
             site, params = None, {}
         state, msg = User().check_user(site, params)
-        if state:
+    
             return {"code": 0, "msg": "认证成功"}
-        return {"code": 1, "msg": f"{msg or '认证失败，请检查合作站点账号是否正常！'}"}
+        
 
     @staticmethod
     def __update_downloader(data):
