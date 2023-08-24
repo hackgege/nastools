@@ -4756,15 +4756,12 @@ class WebAction:
         用户认证
         """
         if data:
-            site = data.get("site")
+            site = data.get("site")p
             params = data.get("params")
         else:
             site, params = None, {}
         state, msg = User().check_user(site, params)
-    
-            return {"code": 0, "msg": "认证成功"}
-        
-
+        return {"code": 0, "msg": "认证成功"}
     @staticmethod
     def __update_downloader(data):
         """
