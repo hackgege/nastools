@@ -4760,7 +4760,7 @@ class WebAction:
             params = data.get("params")
         else:
             site, params = None, {}
-        state = true
+        state = 1
        # msg = User().check_user(site, params)
         if state:
             return {"code": 0, "msg": "认证成功"}
