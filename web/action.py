@@ -46,7 +46,7 @@ from app.utils.types import RmtMode, OsType, SearchType, SyncType, MediaType, Mo
     EventType, SystemConfigKey, RssType
 from config import RMT_MEDIAEXT, RMT_SUBEXT, RMT_AUDIO_TRACK_EXT, Config
 from web.backend.search_torrents import search_medias_for_web, search_media_by_message
-from web.backend.user import User
+#from web.backend.user import User
 from web.backend.web_utils import WebUtils
 
 
